@@ -4,18 +4,20 @@ import GradientText from './GradientText';
 const Hero = () => {
   return (
     <section className="hero relative min-h-screen">
-      <div className="hero-body relative z-10">
+      <div className="hero-body relative z-10" style={{ padding: '1rem 1.5rem' }}>
         <div className="container is-max-desktop">
           <div className="columns is-centered">
             <div className="column has-text-centered">
-              <GradientText
-                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                animationSpeed={10}
-                showBorder={false}
-                className="title is-1 publication-title">
-                3D Gaussian Inverse Rendering with Approximated Global Illumination
-              </GradientText>
-              <div className="is-size-5 publication-authors">
+              <div style={{ marginBottom: '0.5rem' }}>
+                <GradientText
+                  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                  animationSpeed={10}
+                  showBorder={false}
+                  className="title is-1 publication-title">
+                  3D Gaussian Inverse Rendering with Approximated Global Illumination
+                </GradientText>
+              </div>
+              <div className="is-size-5 publication-authors" style={{ marginTop: '0.25rem' }}>
                 <span className="author-block">
                   <a href="https://wuzirui.github.io/" target="_blank" rel="noopener noreferrer">
                     Zirui Wu

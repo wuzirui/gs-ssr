@@ -1,5 +1,4 @@
 import React from 'react';
-import { SplitText } from './SplitText';
 
 const Abstract = () => {
   return (
@@ -8,7 +7,7 @@ const Abstract = () => {
         <div className="columns is-centered has-text-centered">
           <div className="column is-four-fifths">
             <h2 className="title is-3">
-              <SplitText>-Abstract-</SplitText>
+              Abstract
             </h2>
             <div className="content has-text-justified">
               <p>
