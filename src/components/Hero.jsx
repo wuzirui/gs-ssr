@@ -1,17 +1,20 @@
 import React from 'react';
-import { Aurora } from './Aurora';
+import GradientText from './GradientText';
 
 const Hero = () => {
   return (
     <section className="hero relative min-h-screen">
-      <div className="absolute inset-0 overflow-hidden">
-        <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]} speed={0.5} />
-      </div>
       <div className="hero-body relative z-10">
         <div className="container is-max-desktop">
           <div className="columns is-centered">
             <div className="column has-text-centered">
-              <h1 className="title is-1 publication-title">3D Gaussian Inverse Rendering with Approximated Global Illumination</h1>
+              <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={10}
+                showBorder={false}
+                className="title is-1 publication-title">
+                3D Gaussian Inverse Rendering with Approximated Global Illumination
+              </GradientText>
               <div className="is-size-5 publication-authors">
                 <span className="author-block">
                   <a href="https://wuzirui.github.io/" target="_blank" rel="noopener noreferrer">

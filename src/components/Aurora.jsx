@@ -15,6 +15,7 @@ precision highp float;
 
 uniform float uTime;
 uniform float uAmplitude;
+uniform float uOpacity;
 uniform vec3 uColorStops[3];
 uniform vec2 uResolution;
 
@@ -105,12 +106,16 @@ void main() {
     height = (uv.y * 2.0 - height + 0.2);
 
     fragColor.rgb = 0.3 * height * rampColor + vec3(1.0);
-    fragColor.a = 0.8;
+    fragColor.a = uOpacity;
 }
 `;
 
 export const Aurora = (props) => {
-  const { colorStops = ["#00d8ff", "#7cff67", "#00d8ff"], amplitude = 1.0 } = props;
+  const { 
+    colorStops = ["#00d8ff", "#7cff67", "#00d8ff"], 
+    amplitude = 1.0,
+    opacity = 0.8
+  } = props;
   const propsRef = useRef(props);
   propsRef.current = props;
 
@@ -153,6 +158,7 @@ export const Aurora = (props) => {
       uniforms: {
         uTime: { value: 0 },
         uAmplitude: { value: amplitude },
+        uOpacity: { value: opacity },
         uColorStops: { value: colorStopsArray },
         uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
       },
@@ -167,6 +173,7 @@ export const Aurora = (props) => {
       const { time = t * 0.01, speed = 1.0 } = propsRef.current;
       program.uniforms.uTime.value = time * speed * 0.1;
       program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
+      program.uniforms.uOpacity.value = propsRef.current.opacity ?? 0.8;
       const stops = propsRef.current.colorStops ?? colorStops;
       program.uniforms.uColorStops.value = stops.map((hex) => {
         const c = new Color(hex);
@@ -187,7 +194,7 @@ export const Aurora = (props) => {
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [amplitude]);
+  }, [amplitude, opacity]);
 
   return <div ref={ctnDom} className="aurora-container" />;
 };
