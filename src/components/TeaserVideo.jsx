@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageMagnifier from './ImageMagnifier';
 import { SplitText } from './SplitText';
 
 const TeaserVideo = () => {
@@ -13,14 +14,12 @@ const TeaserVideo = () => {
     <section className="hero teaser">
       <div className="container is-max-desktop">
         <div className="hero-body">
-          <img 
+          <ImageMagnifier
             src={imagePath}
             alt="Method Overview"
-            style={{ width: '100%', borderRadius: '10px' }}
-            onError={(e) => {
-              console.error('Image failed to load:', e.target.src);
-              console.log('Current PUBLIC_URL:', process.env.PUBLIC_URL); // Debug log
-            }}
+            magnifierHeight={150}
+            magnifierWidth={150}
+            zoomLevel={2.5}
           />
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
             <SplitText
