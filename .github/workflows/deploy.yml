@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - ghpages
   workflow_dispatch:
 
 permissions:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ghpages  # 确保检出 ghpages 分支
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
@@ -34,5 +36,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          branch: gh-pages
+          branch: gh-pages  # 部署到 gh-pages 分支
           clean: true
