@@ -8,7 +8,13 @@ const Footer = () => {
           <div className="column is-8">
             <div className="content">
               <p>
-                This page was built upon the <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+              <p>
+                Webpage adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://open-air-sun.github.io/mars/">MARS</a>. This web page is Zotero-connector
+                friendly.
               </p>
             </div>
           </div>
