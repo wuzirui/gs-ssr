@@ -6,7 +6,7 @@ const VideoPresentation = () => {
       <div className="hero-body">
         <div className="container is-max-desktop">
           <div className="has-text-centered" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
-            <h2 className="title is-3">Video Presentation</h2>
+            <h2 className="title is-3">Video</h2>
             <div style={{ height: '1rem' }}></div>
             <div className="columns is-centered">
               <div className="column">
