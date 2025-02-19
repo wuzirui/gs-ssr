@@ -2,6 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bulma/css/bulma.min.css';
 import React from 'react';
 import Abstract from './components/Abstract';
+import Citation from './components/Citation';
 import ComparisonSection from './components/ComparisonSection';
 import DecompositionSection from './components/DecompositionSection';
 import EditingResults from './components/EditingResults';
@@ -21,6 +22,7 @@ function App() {
             <ComparisonSection />
             <DecompositionSection />
             <EditingResults />
+            <Citation />
             <Footer />
         </div>
     );
