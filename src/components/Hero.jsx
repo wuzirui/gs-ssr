@@ -1,9 +1,13 @@
 import React from 'react';
+import { Aurora } from './Aurora';
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-body">
+    <section className="hero relative min-h-screen">
+      <div className="absolute inset-0 overflow-hidden">
+        <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]} speed={0.5} />
+      </div>
+      <div className="hero-body relative z-10">
         <div className="container is-max-desktop">
           <div className="columns is-centered">
             <div className="column has-text-centered">
