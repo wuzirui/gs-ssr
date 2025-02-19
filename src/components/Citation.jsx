@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Citation = () => {
-  const bibtex = `@article{wu2024gsssr,
+  const bibtex = `@article{wu_2025_3d_gaussian,
     title={3D Gaussian Inverse Rendering with Approximated Global Illumination},
-    author={Wu, Zirui and Li, Laijian and Wu, Shaoteng},
+    author={Wu, Zirui and Li, Laijian and Wu, Shaoteng and Zhu, Zhikai and Xu, Kang and Oswald, Martin R. and Song, Jie},
     journal={arXiv preprint},
-    year={2024}
+    year={2025}
 }`;
 
   return (
