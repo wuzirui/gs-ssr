@@ -81,4 +81,14 @@
 
 .split-text-container span {
   transform-origin: 50% 50%;
+}
+
+.image {
+  overflow: hidden;
+}
+
+.image img {
+  will-change: clip-path;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 } 

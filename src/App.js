@@ -3,6 +3,7 @@ import 'bulma/css/bulma.min.css';
 import React from 'react';
 import Abstract from './components/Abstract';
 import Citation from './components/Citation';
+import ComparisonSection from './components/ComparisonSection';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Poster from './components/Poster';
@@ -18,6 +19,7 @@ function App() {
             <TeaserImage />
             <Abstract />
             <VideoPresentation />
+            <ComparisonSection />
             <VideoCarousel />
             <Poster />
             <Citation />
