@@ -1,0 +1,44 @@
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+    max-height: 300px;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link-block {
+    margin: 8px;
+}
+
+.author-block {
+    margin-right: 8px;
+}
+
+.results-carousel {
+    overflow: hidden;
+}
+
+.eql-cntrb {
+    font-size: smaller;
+} 
