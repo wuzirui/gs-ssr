@@ -24,22 +24,22 @@ const Hero = () => {
                   </a><sup>1,2</sup>,
                 </span>
                 <span className="author-block">
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://scholar.google.com/citations?user=mS3a3acAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
                     Laijian Li
                   </a><sup>2</sup>,
                 </span>
                 <span className="author-block">
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://openreview.net/profile?id=~Shaoteng_Wu1" target="_blank" rel="noopener noreferrer">
                     Shaoteng Wu
                   </a><sup>2</sup>,
                 </span>
                 <span className="author-block">
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://openreview.net/profile?id=~Zhikai_Zhu1" target="_blank" rel="noopener noreferrer">
                     Zhikai Zhu
                   </a><sup>2</sup>,
                 </span>
                 <span className="author-block">
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://openreview.net/profile?id=~Kang_Xu5" target="_blank" rel="noopener noreferrer">
                     Kang Xu
                   </a><sup>2</sup>,
                 </span>

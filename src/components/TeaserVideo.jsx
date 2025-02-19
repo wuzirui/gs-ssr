@@ -23,7 +23,7 @@ const TeaserVideo = () => {
           />
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
             <SplitText
-              text="Overview of our method"
+              text="Overview of our method. Mouse hover to zoom in."
               className="subtitle has-text-centered"
               delay={10}
               animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
