@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="column is-8">
             <div className="content">
               <p>
-                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>.
+                This page was built upon the <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.
               </p>
             </div>
           </div>

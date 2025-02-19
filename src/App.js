@@ -4,6 +4,7 @@ import React from 'react';
 import Abstract from './components/Abstract';
 import Citation from './components/Citation';
 import ComparisonSection from './components/ComparisonSection';
+import DecompositionSection from './components/DecompositionSection';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Poster from './components/Poster';
@@ -20,6 +21,7 @@ function App() {
             <Abstract />
             <VideoPresentation />
             <ComparisonSection />
+            <DecompositionSection />
             <VideoCarousel />
             <Poster />
             <Citation />
