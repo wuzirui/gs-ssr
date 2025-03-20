@@ -5,7 +5,6 @@ const CHANNELS = [
   { id: 'rendered', label: 'Rendered' },
   { id: 'albedo', label: 'Albedo' },
   { id: 'roughness', label: 'Roughness' },
-  { id: 'consistency', label: 'Consistency' }
 ];
 
 const DecompositionSection = () => {

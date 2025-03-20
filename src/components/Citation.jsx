@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 const Citation = () => {
   const [copied, setCopied] = useState(false);
   
-  const bibtexContent = `@article{wu2024gsssr,
+  const bibtexContent = `@misc{wu2025gsssr,
   title={3D Gaussian Inverse Rendering with Approximated Global Illumination},
   author={Wu, Zirui and Chen, Jianteng and Li, Laijian and Wu, Shaoteng and Zhu, Zhikai and Xu, Kang and Oswald, Martin R. and Song, Jie},
   journal={arXiv preprint},
-  year={2024}
+  year={2025}
 }`;
 
   const handleCopy = async () => {
