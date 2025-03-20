@@ -1,16 +1,20 @@
 import React, { useRef } from 'react';
 
 const RESULTS = [
+  { id: 11, path: '11.png' },
+  { id: 9, path: '9.jpg' },
+  { id: 10, path: '10.jpg' },
   { id: 1, path: '1.jpg' },
   { id: 2, path: '2.jpg' },
   { id: 3, path: '3.jpg' },
   { id: 4, path: '4.jpg' },
   { id: 5, path: '5.jpg' },
   { id: 6, path: '6.jpg' },
+  { id: 7, path: '7.jpg' },
+  { id: 8, path: '8.jpg' },
 ];
 
-// 创建循环数组，在前后各添加一组图片
-const LOOP_RESULTS = [...RESULTS, ...RESULTS, ...RESULTS];
+const LOOP_RESULTS = [...RESULTS];
 
 const EditingResults = () => {
   const containerRef = useRef(null);
