@@ -24,6 +24,11 @@ const Hero = () => {
                   </a><sup>1,2</sup>,
                 </span>
                 <span className="author-block">
+                  <a href="https://jiantengchen.github.io/" target="_blank" rel="noopener noreferrer">
+                  Jianteng Chen
+                  </a><sup>2</sup>,
+                </span>
+                <span className="author-block">
                   <a href="https://scholar.google.com/citations?user=mS3a3acAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
                     Laijian Li
                   </a><sup>2</sup>,

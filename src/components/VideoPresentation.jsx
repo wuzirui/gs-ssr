@@ -12,7 +12,7 @@ const VideoPresentation = () => {
               <div className="column">
                 <div className="publication-video">
                   <iframe 
-                    src="https://www.youtube.com/embed/hdyaAKl7zzE" 
+                    src="https://www.youtube.com/embed/i0SmXJH1uwI" 
                     title="Project Video"
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

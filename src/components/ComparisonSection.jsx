@@ -19,6 +19,7 @@ const ComparisonSection = () => {
         <div className="container is-max-desktop">
           <div className="has-text-centered" style={{ marginBottom: '2rem' }}>
             <h2 className="title is-3">Screen Space Reflection</h2>
+            
             <div className="buttons is-centered" style={{ marginTop: '1rem' }}>
               <button 
                 className={`button is-medium ${isSSR ? 'is-primary' : 'is-light'}`}
@@ -34,7 +35,56 @@ const ComparisonSection = () => {
               </button>
             </div>
           </div>
+            
+            {/* SSR Diagram - changes based on selection */}
+            <div className="image-container" style={{ margin: '1.5rem auto', maxWidth: '1000px', height: '300px', position: 'relative' }}>
+              {/* SSR Diagram */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: isSSR ? 1 : 0,
+                transition: 'opacity 0.3s ease-in-out'
+              }}>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/static/images/ssr_diagram.svg`}
+                  alt="Screen Space Reflection Diagram"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
+              
+              {/* Non-SSR Diagram */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: isSSR ? 0 : 1,
+                transition: 'opacity 0.3s ease-in-out'
+              }}>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/static/images/wossr_diagram.svg`}
+                  alt="Without Screen Space Reflection Diagram"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
+            </div>
           
+          <div className="has-text-centered" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+            <h3 className="title is-4">Comparison</h3>
+          </div>
+
           <div className="columns is-centered">
             {/* Reference Image (Left) */}
             <div className="column is-half">
