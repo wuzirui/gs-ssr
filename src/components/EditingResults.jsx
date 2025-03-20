@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const RESULTS = [
   { id: 11, path: '11.png' },
@@ -14,32 +14,49 @@ const RESULTS = [
   { id: 8, path: '8.jpg' },
 ];
 
-const LOOP_RESULTS = [...RESULTS];
+// 创建三组相同的图片以实现无限循环效果
+const LOOP_RESULTS = [...RESULTS, ...RESULTS, ...RESULTS];
 
 const EditingResults = () => {
   const containerRef = useRef(null);
+  
+  // 组件挂载后将滚动位置初始化到中间组
+  useEffect(() => {
+    if (containerRef.current) {
+      const scrollWidth = containerRef.current.scrollWidth;
+      containerRef.current.scrollLeft = scrollWidth / 3;
+    }
+  }, []);
   
   const scroll = (direction) => {
     const container = containerRef.current;
     const scrollAmount = direction === 'left' ? -400 : 400;
     
-    // 获取当前滚动位置
-    const currentScroll = container.scrollLeft;
-    const containerWidth = container.clientWidth;
-    const scrollWidth = container.scrollWidth;
-    
-    // 在中间部分滚动
+    // 滚动到新位置（有动画）
     container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     
-    // 检查是否需要重置位置（无动画）
+    // 检查边界并重置位置（无动画）
     setTimeout(() => {
-      if (currentScroll + scrollAmount <= 400) {
-        // 如果滚动到最左边，跳转到中间组的开始
-        container.scrollTo({ left: scrollWidth / 3, behavior: 'auto' });
-      } else if (currentScroll + scrollAmount + containerWidth >= (scrollWidth - 400)) {
-        // 如果滚动到最右边，跳转到中间组的结束
-        container.scrollTo({ left: scrollWidth / 3, behavior: 'auto' });
+      const currentScroll = container.scrollLeft;
+      const scrollWidth = container.scrollWidth;
+      const singleSetWidth = scrollWidth / 3;
+      
+      // 暂时禁用滚动行为样式以确保无动画
+      container.style.scrollBehavior = 'auto';
+      
+      // 如果滚动到第一组的区域，跳转到第二组相同位置
+      if (currentScroll < singleSetWidth) {
+        container.scrollLeft = currentScroll + singleSetWidth;
+      } 
+      // 如果滚动到第三组的区域，跳转到第二组相同位置
+      else if (currentScroll >= singleSetWidth * 2) {
+        container.scrollLeft = currentScroll - singleSetWidth;
       }
+      
+      // 恢复滚动行为样式
+      setTimeout(() => {
+        container.style.scrollBehavior = '';
+      }, 50);
     }, 500); // 等待滚动动画完成
   };
 
