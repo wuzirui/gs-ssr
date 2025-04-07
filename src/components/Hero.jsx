@@ -80,7 +80,7 @@ const Hero = () => {
                   {/* Paper Link */}
                   <span className="link-block">
                     <a
-                      href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf"
+                      href="https://arxiv.org/pdf/2504.01358.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="external-link button is-normal is-rounded is-dark"

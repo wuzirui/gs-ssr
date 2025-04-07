@@ -7,6 +7,7 @@ const Citation = () => {
   title={3D Gaussian Inverse Rendering with Approximated Global Illumination},
   author={Wu, Zirui and Chen, Jianteng and Li, Laijian and Wu, Shaoteng and Zhu, Zhikai and Xu, Kang and Oswald, Martin R. and Song, Jie},
   journal={arXiv preprint},
+  url={https://arxiv.org/abs/2504.01358},
   year={2025}
 }`;
 
